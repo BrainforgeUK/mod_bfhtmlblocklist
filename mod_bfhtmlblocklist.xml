@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+	<name>MOD_BFHTMLBLOCKLIST</name>
+	<version>1.0.0</version>
+	<author>Jonathan Brain</author>
+	<authorEmail>brainforge.uk@btinternet.com</authorEmail>
+	<authorUrl>https://www.brainforge.co.uk</authorUrl>
+	<creationDate>April 2023</creationDate>
+	<copyright>Copyright 2023 Jonathan Brain. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>MOD_BFHTMLBLOCKLIST_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_bfhtmlblocklist">mod_bfhtmlblocklist.php</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<scriptfile>script.php</scriptfile>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields
+				name="params">
+			<fieldset
+					name="basic"
+					addformpath="/modules/mod_bfhtmlblocklist/forms"
+			>
+				<field
+						name="htmlitems"
+						type="subform"
+						formsource="htmlitem"
+						label="MOD_BFHTMLBLOCKLIST_HTMLITEMS_LABEL"
+						multiple="true"
+						required="true"
+						min="1"
+				/>
+			</fieldset>
+
+			<fieldset
+					name="options"
+			>
+				<field
+						name="showtitles"
+						type="radio"
+						label="MOD_BFHTMLBLOCKLIST_SHOWTITLES_LABEL"
+						class="btn-group btn-group-yesno"
+						layout="joomla.form.field.radio.switcher"
+						filter="intval"
+						size="1"
+						default="0"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+					name="advanced">
+				<field
+						name="layout"
+						type="modulelayout"
+						default="default-table"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+						module="mod_bfhtmlblocklist"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="MOD_BFHTMLBLOCKLIST">
+			https://brainforge.co.uk/component/bfupdater?element=mod_bfhtmlblocklist.xml
+		</server>
+	</updateservers>
+</extension>
