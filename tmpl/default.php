@@ -22,10 +22,11 @@ $headerEnd = '</' . $headerTag . '>'
 ?>
 <div class="bfhtmlblocklist">
     <?php
-    foreach($htmlItems as $htmlItem)
+    $i = 0;
+    foreach($htmlItems as $key=>$htmlItem)
     {
         ?>
-        <div class="bfhtmlblocklist-item">
+        <div class="bfhtmlblocklist-item bfhtmlblocklist-item<?php echo $i++; ?> <?php echo $key; ?>">
             <?php
             if ($showtitles)
             {
