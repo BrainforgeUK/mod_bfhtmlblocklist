@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.5" client="site" method="upgrade">
 	<name>MOD_BFHTMLBLOCKLIST</name>
-	<version>1.0.0</version>
+	<version>2.0.0</version>
 	<author>Jonathan Brain</author>
 	<authorEmail>brainforge.uk@btinternet.com</authorEmail>
 	<authorUrl>https://www.brainforge.co.uk</authorUrl>
 	<creationDate>April 2023</creationDate>
-	<copyright>Copyright 2023 Jonathan Brain. All rights reserved.</copyright>
+	<copyright>Copyright 2023-2024 Jonathan Brain. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<description>MOD_BFHTMLBLOCKLIST_XML_DESCRIPTION</description>
 
